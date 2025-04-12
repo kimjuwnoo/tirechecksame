@@ -35,15 +35,15 @@ export default function Home() {
       <section className="main_search_area">
         <div className="main_title_area">
           <div className="main_txt_bx">
-            <p className="sub_title_main ico_gray_04">대한민국 대표</p>
-            <p className="title_main">타이어체크 플랫폼!</p>
+            <p className="sub_title_main ico_gray_04">믿음,신뢰,저렴 모든걸 한곳에</p>
+            <p className="title_main">타이어체크</p>
           </div>
         </div>
       </section>
 
       {/* Notice Area */}
       <section className="notice_area bg-wh bx-shdw-20px">
-        <h3 className="font-14 text-center mb-4">타이어체크 서비스를 이용해보세요</h3>
+        <h3 className="font-14 text-center mb-4">타이어체크 서비스</h3>
       </section>
 
       {/* Content Link Area */}
@@ -107,10 +107,10 @@ export default function Home() {
           <li><Link href="#">개인정보처리방침</Link></li>
         </ul>
         <div className="company_info_area">
-          <p>상호명: (주)타이어체크 | 대표: 홍길동</p>
+          <p>상호명: 골든 | 대표: 배건,김준우</p>
           <p>사업자등록번호: 123-45-67890</p>
-          <p>주소: 서울특별시 중구 세종대로 110</p>
-          <p>고객센터: 1588-1234</p>
+          <p>주소: 부산광역시 동구 범일로98-2</p>
+          <p>고객센터: 010-4100-0520</p>
           <p>© 2023 TireCheck. All rights reserved.</p>
         </div>
       </footer>
