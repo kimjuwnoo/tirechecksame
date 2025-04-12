@@ -1,0 +1,14 @@
+[build]
+  command = "next build"
+  publish = "out"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NEXT_DISABLE_ESLINT = "1"
+  NODE_ENV = "production"
+
+[images]
+  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
+
+[functions]
+  node_bundler = "esbuild"
