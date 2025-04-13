@@ -1,11 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function SelectTirePage() {
   const [frontWidth, setFrontWidth] = useState('');
   const [frontRatio, setFrontRatio] = useState('');
   const [frontInch, setFrontInch] = useState('');
+  const router = useRouter();
 
   const widthOptions = ['195', '205', '215', '225', '235', '245', '255', '265', '275'];
   const ratioOptions = ['30', '35', '40', '45', '50', '55', '60', '65', '70'];
@@ -20,10 +23,9 @@ export default function SelectTirePage() {
       </p>
 
       <div className="flex justify-center mb-6">
-        <img src="/images/tire-size-guide.png" alt="타이어 이미지" className="w-64" />
+        <Image src="/images/tire-size-guide.png" alt="타이어 이미지" width={256} height={160} />
       </div>
 
-      {/* 앞 타이어 */}
       <div className="mb-6">
         <h3 className="font-semibold mb-2">앞 타이어</h3>
         <div className="grid grid-cols-3 gap-4">
@@ -44,10 +46,14 @@ export default function SelectTirePage() {
         </div>
       </div>
 
-      {/* 다음 버튼 */}
       <div className="text-center mt-6">
         <button
           disabled={!(frontWidth && frontRatio && frontInch)}
+          onClick={() => {
+            if (frontWidth && frontRatio && frontInch) {
+              router.push(`/search-result?width=${frontWidth}&ratio=${frontRatio}&inch=${frontInch}`);
+            }
+          }}
           className={`px-6 py-2 rounded text-white font-bold ${
             frontWidth && frontRatio && frontInch ? 'bg-blue-600' : 'bg-gray-300 cursor-not-allowed'
           }`}
